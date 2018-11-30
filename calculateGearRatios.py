@@ -22,6 +22,7 @@
 ##########################################################################################################
 
 import os
+import unittest
 
 #Lists and variables to store initial test data                    
 front_cogs = [38, 30]               #List to store Front cogs of bicycle drivetrain
@@ -66,11 +67,11 @@ def get_gear_combination(ff_cogs, rr_cogs, target_rratio):
 #              (less than or equal) to the given ratio
 ##########################################################################################################
 def get_shift_sequence(ff_cogs, rr_cogs, rratio, init_combination):
-    print("\nDetermine Shift Sequence for ratio",ratio,"and initial gear",init_combination)
+    print("\nDetermine Shift Sequence for ratio",rratio,"and initial gear",init_combination)
     i = 0                                             #Initialize variable
     j = 0                                             #Initialize variable
     idx_front = idnx_front = 0
-    idx_rear = indx_reare = 0
+    idx_rear = indx_rear = 0
     shift_sequence = []                               #Initilize shift_sequence
     for i, front in enumerate(ff_cogs, start=0):      #Determine initial_combination front cog index
         if (front == init_combination[0]):
